@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>English Grammar Challenge</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+<header class="topbar">
+<div class="brand">
+<div class="logo">📘</div>
+<div>
+<h1>English Grammar Challenge</h1>
+<p>KSSR CEFR Primary Grammar Game</p>
+</div>
+</div>
+<div class="top-pill"><span id="topAvatar">👦</span><span id="topCoins">0</span> 🪙</div>
+</header>
+<main>
+<section id="menuScreen" class="screen active hero">
+<div class="hero-card">
+<div class="avatar-row"><span>👦</span><span>👧</span><span>🤖</span><span>🐱</span><span>🦊</span><span>🐼</span><span>🧙</span></div>
+<h2>English Grammar Challenge</h2>
+<p>Fun English grammar quizzes for Malaysian primary school learners</p>
+<div class="menu-grid">
+<button id="startBtn" class="big-btn primary">▶ Start Game</button>
+<button id="progressBtn" class="big-btn">📊 Progress</button>
+<button id="achievementBtn" class="big-btn">🏆 Achievement</button>
+<button id="settingsBtn" class="big-btn">⚙ Settings</button>
+</div>
+</div>
+</section>
+<section id="setsScreen" class="screen">
+<div class="panel">
+<div class="section-head">
+<h2>Choose Set</h2>
+<button class="small-btn" data-screen="menuScreen">🏠 Home</button>
+</div>
+<div class="tabs">
+<button class="tab active" data-min="1" data-max="20">Level 1<br><small>Set 1-20</small></button>
+<button class="tab" data-min="21" data-max="40">Level 2<br><small>Set 21-40</small></button>
+<button class="tab" data-min="41" data-max="60">Level 3<br><small>Set 41-60</small></button>
+<button class="tab" data-min="61" data-max="100">Level 4<br><small>Set 61-100</small></button>
+</div>
+<div id="setGrid" class="set-grid"></div>
+</div>
+</section>
+<section id="gameScreen" class="screen">
+<div class="game-wrap">
+<div class="game-top">
+<button id="gameHomeBtn" class="small-btn">🏠 Home</button>
+<div class="hud">
+<span id="qCount">Question 1 / 20</span>
+<span id="scoreHud">Score: 0</span>
+<span id="lifeHud">❤️❤️❤️</span>
+<span id="coinHud">0 🪙</span>
+</div>
+</div>
+<div class="bar"><div id="questionBar"></div></div>
+<div class="question-card">
+<div id="typeTag" class="tag">Multiple Choice</div>
+<h2 id="questionText">Question text</h2>
+<div id="answerArea" class="answer-grid"></div>
+<div id="feedback" class="feedback"></div>
+<div class="actions">
+<button id="submitBtn" class="big-btn primary">Submit</button>
+<button id="nextBtn" class="big-btn hidden">Next</button>
+</div>
+</div>
+</div>
+</section>
+<section id="endScreen" class="screen">
+<div class="result-card">
+<h2 id="endHeading">Congratulations!</h2>
+<div id="starDisplay" class="stars">★★★</div>
+<div class="result-grid">
+<div><b>Score</b><span id="finalScore">0</span></div>
+<div><b>Correct</b><span id="finalCorrect">0/20</span></div>
+<div><b>Wrong</b><span id="finalWrong">0</span></div>
+<div><b>Percentage</b><span id="finalPercent">0%</span></div>
+</div>
+<div class="actions wrap">
+<button id="retryBtn" class="big-btn">🔁 Retry</button>
+<button id="nextSetBtn" class="big-btn primary">➡ Next Set</button>
+<button class="big-btn" data-screen="menuScreen">🏠 Home</button>
+</div>
+</div>
+</section>
+<section id="progressScreen" class="screen">
+<div class="panel">
+<div class="section-head">
+<h2>Progress</h2>
+<button class="small-btn" data-screen="menuScreen">🏠 Home</button>
+</div>
+<div class="stats-grid">
+<div class="stat"><span>✅</span><b>Total Sets Completed</b><p id="statSets">0</p></div>
+<div class="stat"><span>❓</span><b>Questions Answered</b><p id="statQuestions">0</p></div>
+<div class="stat"><span>🎯</span><b>Accuracy</b><p id="statAccuracy">0%</p></div>
+<div class="stat"><span>📚</span><b>Current Level</b><p id="statLevel">Level 1</p></div>
+<div class="stat"><span>🪙</span><b>Coins</b><p id="statCoins">0</p></div>
+<div class="stat"><span>⭐</span><b>Stars</b><p id="statStars">0</p></div>
+<div class="stat wide"><span>🏆</span><b>Achievements</b><p id="statAchievements">0/7</p></div>
+</div>
+</div>
+</section>
+<section id="achievementScreen" class="screen">
+<div class="panel">
+<div class="section-head">
+<h2>Achievements</h2>
+<button class="small-btn" data-screen="menuScreen">🏠 Home</button>
+</div>
+<div id="achievementGrid" class="badge-grid"></div>
+</div>
+</section>
+<section id="settingsScreen" class="screen">
+<div class="panel">
+<div class="section-head">
+<h2>Settings</h2>
+<button class="small-btn" data-screen="menuScreen">🏠 Home</button>
+</div>
+<h3>Avatars</h3>
+<div id="avatarGrid" class="shop-grid"></div>
+<h3>Themes</h3>
+<div id="themeGrid" class="shop-grid"></div>
+</div>
+</section>
+</main>
+<div id="toast" class="toast"></div>
+</div>
+<script src="questions.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
